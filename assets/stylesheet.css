@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6, p, div {
 }
 
 body {
-  font-family: "Lucida Grande";
+  font-family: 'Open Sans', sans-serif;
 }
 
 li {
@@ -23,6 +23,8 @@ a {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+/* Start Header NavBar */
 
 .header {
   width: 100%;
@@ -42,50 +44,63 @@ a {
 }
 
 .header-right {
-  float: right;
-  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 50%;
+  right: -20%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
-.header-right:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+.header-right li {
+  display: inline-block;
 }
 
-.header-right a {
-  line-height: 65px;
+.header-right li a {
+  display: inline-block;
   padding: 0 25px;
+  margin-right: 30px;
   color: #252a34;
 }
 
+.btn-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #f0a500;
+  transition: width .3s;
+}
+
+.btn-link:hover::after {
+  width: 100%;
+  transition: width .3s;
+}
+
+/* End Header NavBar */
+
+/* Start Top Wrapper */
+
 .top-wrapper {
-  background-image: url("assets/top.png");
+  background-image: url("/assets/top2.png");
   padding: 300px 0 100px 0;
   background-size: cover;
   color: white;
   text-align: center;
-  height: 400px;
 }
 
 .top-wrapper h1 {
   letter-spacing: 3px;
-  font-size: 40px;
+  font-size: 60px;
   margin-bottom: 10px;
+  font-family: 'Knewave', cursive;
+  text-shadow: 1px 1px 1px #5d5d5d;
 }
 
 .top-wrapper p {
-  font-size: 20px;
+  letter-spacing: 3px;
+  font-size: 35px;
   margin-bottom: 40px;
-}
-
-.btn-wrapper {
-  margin: 20px 0;
-}
-
-.btn-wrapper p {
-  margin: 10px 0;
-}
-
-.started {
-  background-color: #f0a500;
+  font-family: 'Just Another Hand', cursive;
+  text-shadow: 1px 1px 1px #5d5d5d;
 }
 
 .btn {
@@ -101,9 +116,7 @@ a {
   opacity: 1;
 }
 
-.fa {
-  margin-right: 5px;
-}
+/* End Top Wrapper */
 
 .lesson-wrapper {
   height: 580px;
