@@ -21,7 +21,7 @@ a {
 .container {
   width: 1170px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
 /* Start Header NavBar */
@@ -80,7 +80,7 @@ a {
 /* Start Top Wrapper */
 
 .top-wrapper {
-  background-image: url("/assets/gambar-top.jpg");
+  background-image: url("/assets/gambar-top.png");
   padding: 300px 0 100px 0;
   background-size: cover;
   color: white;
@@ -116,78 +116,211 @@ a {
   opacity: 1;
 }
 
-/* End Top Wrapper */
+/* End Top Wrapper */`
 
-.lesson-wrapper {
-  height: 580px;
-  text-align: center;
-  padding-bottom: 80px;
+/* Start Wisata Wrapper */
+
+.wisata-wrapper {
   background-color: #f7f7f7;
 }
 
+/* heading untuk profile wrapper dan lesson wrapper */
 .heading {
   padding-top: 60px;
-  padding-bottom: 30px;
+  padding-bottom: 35px;
   color: #5f5d60;
+  font-weight: normal;
+  text-align: center;
+  position: relative;
+}
+
+.heading::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #f0a500;
+  position: absolute;
+  bottom:20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
 }
 
 .heading h2 {
   font-weight: normal;
 }
 
+.lessons {
+  display: grid;
+  max-width: 500px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  padding-left: 26%;
+}
+
 .lesson {
-  float: left;
-  width: 25%;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
 }
 
 .lesson-icon {
-  position: relative;
+  width: 100%;
+  display: block;
+  text-align: center;
 }
 
 .lesson-icon p {
-  position: absolute;
-  top: 90px;
-  width: 100%;
-  color: white;
+  padding: 20px 0;
 }
 
 .txt-contents {
-  display: inline-block;
-  width: 80%;
-  margin-top: 20px;
-  font-size: 15px;
-  color: #b3aeb5;
-}
-
-.message-wrapper {
+  padding-bottom: 20px;
   text-align: center;
-  padding-bottom: 80px;
-  border-bottom: 1px solid #eee;
 }
 
-.heading h2, h3 {
-  font-weight: normal;
+/* End Wisata Wrapper */
+
+/* Start Profile Wrapper */
+
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
 }
 
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  opacity: 0.8;
-  box-shadow: 0px 7px #1a7940;
-  cursor: pointer;
+.card {
+  background-color: #f9f7f7;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+  box-shadow: 8px 8px 5px rgba(0,0,0,0.2);
 }
 
-.message:active {
-  box-shadow: none;
-  position: relative;
-  top: 7px;
+.card .profile-img {
+  width: 100%;
+  height: auto;
 }
+
+.card h1 {
+  font-size: 20px;
+  margin: 24px 0;
+  color: #333;
+}
+
+.job-title {
+  font-size: 15px;
+  font-weight: 300;
+  color: #777;
+}
+
+.about {
+  font-size: 15px;
+  margin: 24px 0;
+  font-style: italic;
+  text-align: center;
+  color: #333;
+}
+
+@media screen and (min-width:700px) {
+  .card-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    margin: 1rem;
+    transition: transform .5s;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .card:nth-child(1) {
+    animation: fadeIn .5s .5s backwards;
+  }
+  .card:nth-child(2) {
+    animation: fadeIn .5s 1s backwards;
+  }
+  .card:nth-child(3) {
+    animation: fadeIn .5s 1.5s backwards;
+  }
+  .card:nth-child(4) {
+    animation: fadeIn .5s 2s backwards;
+  }
+  .card:nth-child(5) {
+    animation: fadeIn .5s 2.5s backwards;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* End Profile Wrapper */
+
+/* Start Footer */
 
 .footer {
-  padding-top: 30px;
+  padding: 40px 0 ;
   background-color: rgb(249, 247, 247);
+  text-align: center;
+}
+
+.footer p {
+  color: rgba(31, 31, 31, 0.6);
 }
 
 .footer img {
   width: 125px;
 }
+
+.nav-footer {
+  padding: 20px;
+}
+
+.nav-footer li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.social-media {
+  padding-top: 40px ;
+}
+
+.social-media li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.social-media i {
+  font-size: 25px;
+}
+
+.fa-facebook-square {
+  color: #3b5999;
+}
+
+.fa-twitter-square {
+  color: #55acee;
+}
+
+.fa-instagram-square {
+  color: #e6683c;
+}
+
+.fa-google-plus-square {
+  color: #dd4b39;
+}
+
+/* End Footer */
